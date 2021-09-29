@@ -3,14 +3,339 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 15px;
   font-weight: 600;
+  background: no-repeat url(./images/bg-pattern.svg), #fafbff;
+  text-align: center;
 }
 
-.attribution {
+header {
+  background: 50% 50%/150px no-repeat url(./images/pattern-circles.svg);
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 25px 0 10px;
+}
+
+header h1 {
+  font-size: 20px;
+  color: #293356;
+  margin: 0;
+}
+
+header p {
+  font-size: 13px;
+  padding: 0 100px;
+  color: #858fad;
+  margin-bottom: 10px;
+}
+
+main {
+  margin: 0 25px;
+}
+
+main .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 20px 50px -46px #293356;
+          box-shadow: 0px 20px 50px -46px #293356;
+}
+
+main .card .pricing {
+  width: 100%;
+}
+
+main .card h3 {
+  font-size: 12px;
+  color: #858fad;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+main .card input[type=range] {
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+main .card input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: #eaeefb;
+  border: none;
+  border-radius: 4px;
+}
+
+main .card input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: center/24px no-repeat url(./images/icon-slider.svg), #10d5c2;
+  margin-top: -15px;
+  -webkit-box-shadow: 0px 10px 35px -3px #10d5c2;
+          box-shadow: 0px 10px 35px -3px #10d5c2;
+}
+
+main .card input[type=range]:focus {
+  outline: none;
+}
+
+main .card input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #eaeefb;
+}
+
+main .card h2 {
+  font-size: 14px;
+  color: #858fad;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+}
+
+main .card h2 span {
+  font-size: 30px;
+  color: #293356;
+  margin-right: 5px;
+  font-weight: 800;
+}
+
+main .card .billing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin: 15px 0;
+  width: 275px;
+}
+
+main .card .billing .switch {
+  margin: 5px 10px 0;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+main .card .billing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+main .card .billing .switch input:checked + .slider {
+  background-color: #10d5c2;
+}
+
+main .card .billing .switch input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+          transform: translateX(18px);
+}
+
+main .card .billing .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cdd7ee;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 21px;
+}
+
+main .card .billing .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+main .card .billing span {
+  font-size: 12px;
+  color: #858fad;
+}
+
+main .card .billing span .discount-badge {
+  display: inline;
+  position: absolute;
+  right: -15px;
+  background-color: #feece7;
+  color: #ff8c66;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 9px;
+}
+
+main .card p {
+  font-size: 13px;
+  color: #858fad;
+  margin: 6px 0 0;
+}
+
+main .card p::before {
+  content: url(./images/icon-check.svg);
+  margin-right: 15px;
+}
+
+main .card button {
+  background-color: #293356;
+  border: none;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  color: #cdd7ee;
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 30px 0 5px;
+}
+
+main .card button:hover {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.divider {
+  background-color: #eaeefb;
+  height: 1px;
+  width: 100%;
+  margin: 25px 0 25px 0;
+  padding-right: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .attribution {
+  margin-bottom: 10px;
   font-size: 11px;
   text-align: center;
 }
 
-.attribution a {
+footer .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (min-width: 650px) {
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+  main {
+    margin: 0;
+  }
+  main .card {
+    padding: 25px 50px;
+  }
+  main .card .pricing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 25px;
+    width: 100%;
+  }
+  main .card h3 {
+    font-size: 15px;
+    margin: 0;
+  }
+  main .card h2 {
+    margin: 0;
+  }
+  main .card h2 span {
+    font-size: 36px;
+  }
+  main .card input {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 40px 0;
+  }
+  main .card .billing span .discount-badge {
+    right: -75px;
+  }
+  main .card .billing span .discount-badge span {
+    display: initial;
+    color: #ff8c66;
+  }
+  main .card .card-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 475px;
+  }
+  main .card .card-footer .info {
+    margin-bottom: 6px;
+  }
+  main .card .card-footer .info p {
+    text-align: left;
+  }
+  main .card .card-footer button {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
