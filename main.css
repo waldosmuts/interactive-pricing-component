@@ -80,7 +80,8 @@ main .card input[type=range] {
 main .card input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 8px;
-  background: #eaeefb;
+  background: -webkit-gradient(linear, left top, right top, from(#a5f3eb), color-stop(50%, #a5f3eb), color-stop(50%, #eaeefb), to(#eaeefb));
+  background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 50%, #eaeefb 100%);
   border: none;
   border-radius: 4px;
 }
@@ -103,6 +104,29 @@ main .card input[type=range]:focus {
 
 main .card input[type=range]:focus::-webkit-slider-runnable-track {
   background: #eaeefb;
+}
+
+main .card .views-0::-webkit-slider-runnable-track {
+  background: #eaeefb !important;
+}
+
+main .card .views-25::-webkit-slider-runnable-track {
+  background: -webkit-gradient(linear, left top, right top, from(#a5f3eb), color-stop(25%, #a5f3eb), color-stop(25%, #eaeefb), to(#eaeefb)) !important;
+  background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 25%, #eaeefb 25%, #eaeefb 100%) !important;
+}
+
+main .card .views-50::-webkit-slider-runnable-track {
+  background: -webkit-gradient(linear, left top, right top, from(#a5f3eb), color-stop(50%, #a5f3eb), color-stop(50%, #eaeefb), to(#eaeefb)) !important;
+  background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 50%, #eaeefb 100%) !important;
+}
+
+main .card .views-75::-webkit-slider-runnable-track {
+  background: -webkit-gradient(linear, left top, right top, from(#a5f3eb), color-stop(75%, #a5f3eb), color-stop(75%, #eaeefb), to(#eaeefb)) !important;
+  background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 75%, #eaeefb 75%, #eaeefb 100%) !important;
+}
+
+main .card .views-100::-webkit-slider-runnable-track {
+  background: #a5f3eb !important;
 }
 
 main .card h2 {
@@ -265,6 +289,9 @@ footer .attribution a {
 }
 
 @media screen and (min-width: 650px) {
+  body {
+    background: center top/100% no-repeat url(./images/bg-pattern.svg), #fafbff;
+  }
   header h1 {
     font-size: 28px;
   }
